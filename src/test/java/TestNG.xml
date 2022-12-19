@@ -5,7 +5,7 @@
     <test name="All test">
         <classes>
             <class name="TestHomePage.TestSearch"></class>
-            <class name="TestHomePage.SimpleTest"></class>
+            <class name="DemoExamples.WaitExample"></class>
         </classes>
     </test>
 </suite>

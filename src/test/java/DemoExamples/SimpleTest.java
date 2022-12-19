@@ -1,4 +1,4 @@
-package TestHomePage;
+package DemoExamples;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

@@ -35,7 +35,7 @@ public class BaseSetup extends Configuration {
         }
 
         driver.manage().window().maximize();
-        driver.get("https://automation.scaledupit.com");
+        driver.get(getUrl());
 
     }
 

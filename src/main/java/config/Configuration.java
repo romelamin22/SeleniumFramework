@@ -6,9 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class Configuration {
-
     public static Properties prop;
-
 
     String path = System.getProperty("user.dir") + File.separator + "src" + File.separator
             + "main" + File .separator + "resources" + File.separator + "prop.properties";
@@ -30,7 +28,6 @@ public class Configuration {
         }
 
     }
-
     public static String getUrl(){
 
         String url = prop.getProperty("url");//getProperty gets the value of the key name you provide

@@ -4,7 +4,6 @@ package application.page_library;
 import library.BaseSetup;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BaseSetup {
@@ -19,13 +18,11 @@ public class HomePage extends BaseSetup {
     public HomePage(){
         PageFactory.initElements(driver, this);
     }
-
     public void enterSearchTerm(String searchTerm){
 
         searchInput.sendKeys(searchTerm);
 
     }
-
     public void clickOnSearchButton(){
 
         searchButton.click();
@@ -39,6 +36,7 @@ public class HomePage extends BaseSetup {
 
         return new SearchResultPage();
     }
+
 
 
 

@@ -4,10 +4,9 @@ import application.page_library.HomePage;
 import application.page_library.ProductPage;
 import application.page_library.SearchResultPage;
 import library.BaseSetup;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestSearch extends BaseSetup {
+public class TestHome extends BaseSetup {
 
     /*
     *
@@ -38,6 +37,15 @@ public class TestSearch extends BaseSetup {
 
 
 //        Assert.assertEquals(resultPage.getSearchTerm(), "shirt");
+
+    }
+
+    @Test
+    public void sliderFunction(){
+
+    }
+    @Test
+    public void menu(){
 
     }
 

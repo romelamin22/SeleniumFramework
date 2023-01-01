@@ -6,13 +6,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 
+import java.time.Duration;
+
 public class BaseSetup extends Configuration {
 
     public static WebDriver driver;
+    public static WebDriverWait wait;
 
     @BeforeTest
     public static void startBrowser(@Optional("chrome") String browser, String url){
@@ -30,6 +35,8 @@ public class BaseSetup extends Configuration {
             driver = new EdgeDriver();
 
         }
+
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         driver.manage().window().maximize();
         driver.get(getUrl());
@@ -50,6 +57,8 @@ public class BaseSetup extends Configuration {
     public String getTextInsideElement(WebElement element){
 
         String text = element.getText();
+
+        wait.until(ExpectedConditions.visibilityOf(element));
 
         if (text.equals("")){
             //innerHTML provides the value of elements text

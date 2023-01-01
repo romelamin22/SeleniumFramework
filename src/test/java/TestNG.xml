@@ -4,7 +4,7 @@
 <suite name="Test">
     <test name="All test">
         <classes>
-            <class name="TestHomePage.TestSearch"></class>
+            <class name="TestHomePage.TestHome"></class>
             <class name="DemoExamples.WaitExample"></class>
         </classes>
     </test>

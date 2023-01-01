@@ -16,6 +16,7 @@ public class SimpleTest {
         Thread.sleep(5000);
 
         driver.quit();
+
     }
 
 }

@@ -4,6 +4,7 @@ import application.page_library.HomePage;
 import application.page_library.ProductPage;
 import application.page_library.SearchResultPage;
 import library.BaseSetup;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestHome extends BaseSetup {
@@ -36,7 +37,8 @@ public class TestHome extends BaseSetup {
         Thread.sleep(3000);
 
 
-//        Assert.assertEquals(resultPage.getSearchTerm(), "shirt");
+        //Validating
+        Assert.assertEquals(resultPage.getSearchTerm(), "shirt");
 
     }
 

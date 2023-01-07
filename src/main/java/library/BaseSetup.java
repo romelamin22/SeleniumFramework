@@ -6,12 +6,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Optional;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 
 public class BaseSetup extends Configuration {
@@ -68,5 +72,24 @@ public class BaseSetup extends Configuration {
         return text;
 
     }
+
+    public void robotActions(int first, int second){
+
+        try {
+
+            Robot robot = new Robot();
+
+            robot.keyPress(first);
+            robot.keyPress(second);
+
+            robot.keyRelease(first);
+            robot.keyRelease(second);
+
+
+        } catch (AWTException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
 
 }
